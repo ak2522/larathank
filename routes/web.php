@@ -10,19 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'PagesController@index')->name('index');
+Route::get('/', 'PagesController@about')->name('about');
+Route::get('/', 'PagesController@contact')->name('contact');
 
-Route::get('/', function () {
-    return view('pages.index');
-});
-Route::get('/about', function () {
-    return view('pages.about');
-});
-Route::get('/contact', function () {
-    return view('pages.contact');
-});
-Route::post('/contact', function () {
-    $data = request()->all();
-
-        echo "Email: " .$data['email'] .'<br>';
-        echo "Body: " .$data['body'];
-});
