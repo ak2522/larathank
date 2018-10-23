@@ -24,12 +24,13 @@ class PagesController extends Controller
     function store(Request $request)
     {
         $name = $request->name;
-        //return redirect()->route('thanks', ['name' => $name ]);
+        return redirect()->route('thanks', ['name' => $name ]);
     }
 
-    function thanks($name)
+    function thanks($name , Request $request)
     {
-        return view( 'pages.thankyou')->with(compact('name'));
+        dd($request);
+        return view( ', pages.thankyou')->with(compact('name'));
     }
 
 }
