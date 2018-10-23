@@ -10,7 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'PagesController@index')->name('index');
-Route::get('/', 'PagesController@about')->name('about');
-Route::get('/', 'PagesController@contact')->name('contact');
-
+Route::get('/', function(){
+    return view('pages.home');
+})->name('home');
+Route::get('/', function(){
+    return view('pages.about');
+})->name('about');
+Route::get('/', function(){
+    return view('pages.contact');
+})->name('contact');

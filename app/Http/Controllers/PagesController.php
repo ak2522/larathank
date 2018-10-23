@@ -8,7 +8,7 @@ class PagesController extends Controller
 {
     function home()
     {
-        return view('pages.index');
+        return view('pages.home');
     }
 
     function about()
