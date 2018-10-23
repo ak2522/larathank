@@ -29,7 +29,6 @@ class PagesController extends Controller
 
     function thanks($name , Request $request)
     {
-        dd($request);
         return view( ', pages.thankyou')->with(compact('name'));
     }
 
