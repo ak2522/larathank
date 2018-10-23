@@ -5,6 +5,8 @@
 
     <form role="form" id="contact-form" class="contact-form" method="POST" action="{{route('contact.store')}}">
 
+        {{csrf_field()}}
+
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
